@@ -32,7 +32,6 @@ gmake
 gmake install clean
 
 # Install arib-b25-stream-test
-ln -s /usr/local/bin/bash /bin/bash
 cd /usr/local
 fetch https://registry.npmjs.org/arib-b25-stream-test/-/arib-b25-stream-test-0.2.9.tgz
 tar xf arib-b25-stream-test-0.2.9.tgz
@@ -65,6 +64,7 @@ pm2 install pm2-logrotate
 
 # Start service and registration to init system
 pm2 start processes.json
+pm2 save
 pm2 startup
 
 echo "Running as root user" >> /root/PLUGIN_INFO
