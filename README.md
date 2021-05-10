@@ -28,7 +28,10 @@ add path 'ttyU*' mode 660 group uucp
 Then install the plugin with some options. Set the `mount_devfs` and `allow_mount_devfs` options to yes, and specify the rule number added in the previous step in `devfs_ruleset`.
 
 ```
-sudo iocage fetch -P mirakurun -n mirakurun -g https://github.com/fuji44/iocage-fuji44-plugins.git --branch main ip4_addr="em0|192.168.0.100/24" mount_devfs=yes allow_mount_devfs=yes devfs_ruleset=100
+sudo iocage fetch -P mirakurun -n mirakurun \
+  -g https://github.com/fuji44/iocage-fuji44-plugins.git \
+  ip4_addr="em0|192.168.0.100/24" \
+  mount_devfs=yes allow_mount_devfs=yes devfs_ruleset=100
 ```
 
 It takes a lot of time because of the large number of packages to build and install.
