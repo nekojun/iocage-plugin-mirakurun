@@ -67,8 +67,10 @@ pm2 start processes.json
 pm2 save
 pm2 startup
 
+echo "✅ Mirakurun install is complete!" > /root/PLUGIN_INFO
 echo "Running as root user" >> /root/PLUGIN_INFO
 echo "App dir: /usr/local/Mirakurun" >> /root/PLUGIN_INFO
 echo "Config dir: /usr/local/etc/mirakurun" >> /root/PLUGIN_INFO
+echo "Git hash: `git rev-parse --short HEAD`" >> /root/PLUGIN_INFO
 echo "" >> /root/PLUGIN_INFO
 echo "You can set the server, tuner, and channel from the Web UI." >> /root/PLUGIN_INFO
