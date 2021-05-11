@@ -68,4 +68,4 @@ pm2 startup
         echo "Git hash: $(git rev-parse --short HEAD)"
         echo ""
         echo "You can set the server, tuner, and channel from the Web UI."
-} >> /root/PLUGIN_INFO
+} > /root/PLUGIN_INFO
