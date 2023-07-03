@@ -38,7 +38,7 @@ sed -e 's/"linux"/"linux","freebsd"/g' -e 's/make /make CC=cc CXX=c++ /g' packag
 npm install . -g --unsafe
 
 # Install mirakurun
-git clone -b feature/support-freebsd https://github.com/fuji44/Mirakurun.git /usr/local/Mirakurun
+git clone -b task/support_freebsd https://github.com/nekojun/Mirakurun.git /usr/local/Mirakurun
 cd /usr/local/Mirakurun || { echo "Clone Mirakurun failed."; exit 1; }
 npm install
 npm run build
